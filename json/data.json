@@ -1,0 +1,29 @@
+[
+  {
+    "brand" : "KenGen Power",
+    "date" : "12-01-2018",
+    "status" : false,
+    "due" : "1280.00",
+    "more" : "Pay before",
+    "id" : "1354955",
+    "img" : "images/brand1.png"
+  },
+  {
+    "brand" : "Tech Power",
+    "date" : "10-03-2016",
+    "status" : false,
+    "due" : "2650.00",
+    "more" : "Must to pay before",
+    "id" : "4567952",
+    "img" : "images/brand2.png"
+  },
+  {
+    "brand" : "Airtel Power",
+    "date" : "12-01-2018",
+    "status" : false,
+    "due" : "2000.00",
+    "more" : "Pay before lahmacun",
+    "id" : "2587641",
+    "img" : "images/brand3.png"
+  }
+]
