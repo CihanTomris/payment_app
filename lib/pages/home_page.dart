@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:payment_app/components/colors.dart';
+import 'package:payment_app/pages/payment_page.dart';
 import 'package:payment_app/widgets/buttons.dart';
 import 'package:payment_app/widgets/large_buttons.dart';
 import 'package:payment_app/widgets/text_size.dart';
@@ -25,7 +28,6 @@ class _HomePageState extends State<HomePage> {
             _headSection(),
             _listBills(),
             _payButton(),
-
           ],
         ),
       ),
@@ -40,6 +42,8 @@ class _HomePageState extends State<HomePage> {
           _mainBackground(),
           _curveImageContainer(),
           _buttonContainer(),
+          _textContainer(),
+
         ],
       ),
     );
@@ -313,6 +317,27 @@ class _HomePageState extends State<HomePage> {
   _payButton(){
     return Positioned(
       bottom: 10,
-        child: AppLargeButton(text: "Pay all bills", textColor: Colors.white,));
+        child: AppLargeButton(text: "Pay all bills", textColor: Colors.white, onTap: (){Get.to(()=> PaymentPage());},));
+  }
+
+  _textContainer(){
+    return Stack(
+      children: [
+        Positioned(
+          left: 0,
+          top: 110,
+          child: Text("My Bills",
+            style: TextStyle(fontSize: 70,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF293952)),),),
+        Positioned(
+          left: 40,
+          top: 90,
+          child: Text("My Bills",
+            style: TextStyle(fontSize: 50,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),),),
+      ],
+    );
   }
 }
